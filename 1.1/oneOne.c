@@ -6,7 +6,11 @@
 // 1.1.1 
 // a)
 void oneOneOne() {
+    int number1 = 5;
+    int number2 = 10;
+    int result = number1*number2;
     printf("Låt oss göra lite matte\n");
+    printf("%d",&result);
 }
 
 // b)
