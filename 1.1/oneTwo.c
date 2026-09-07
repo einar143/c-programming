@@ -42,7 +42,7 @@ att producera följande utskrifter från programmet:
 */
 
 
-int main(void) { // Körning av funktioner för delkapitel 1.2 :)
+int main(void) { // Körning av funktioner för delkapitel 1.2
     oneOneTwo();
     return 0;
 }
