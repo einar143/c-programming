@@ -23,7 +23,7 @@ Saker som t.ex att ta bort kommentarer, fixar #include osv.
 - Kompilatorn är det steget som tar en en .c fil och översätter den till assemblerspråk.
 
 - Länkare tar olika filer med binära instruktioner och länkar dem i den ordningen de ska utföras och skapar
-skapar en exekverbar fil
+skapar en exekverbar fil.
 */
 
 // 1.1.2 --------------------------------------------------------------
@@ -75,3 +75,6 @@ int main(void) { // Körning av funktioner för delkapitel 1.1 :)
     oneOneTwoD();
     return 0;
 }
+
+
+// gcc -Wall -Wextra -std=c11

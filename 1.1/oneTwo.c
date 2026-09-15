@@ -47,3 +47,6 @@ int main(void) { // Körning av funktioner för delkapitel 1.2
     oneOneTwo();
     return 0;
 }
+
+
+// gcc -Wall -Wextra -std=c11

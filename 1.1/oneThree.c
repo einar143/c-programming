@@ -107,7 +107,6 @@ void oneThreeFour() {
     }
 }
 
-
 // 1.3.5 --------------------------------------------------------------
 /* När du handlar i en affär och betalar kontant får du kanske växel tillbaka. I regel får affärsbiträdet
 hjälp av kassaapparaten med att beräkna summan man ska få tillbaka, men inte alltid vilka sedlar
@@ -131,3 +130,5 @@ int main(void) { // Körning av funktioner för delkapitel 1.2
     // oneThreeFive();
     return 0;
 }
+
+// gcc -Wall -Wextra -std=c11
