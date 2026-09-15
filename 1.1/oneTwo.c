@@ -30,6 +30,7 @@ void oneOneTwo() {
     }
     printf("Resultatet av %d * 2 är %d och det har %d siffror.\n", number, result, digitCount);
 }
+
 // 1.2.2 --------------------------------------------------------------
 /*
 Skriv ett program som läser in två heltal, låt oss kalla dem P och Q. Använd funktionen printf för
