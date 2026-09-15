@@ -117,11 +117,14 @@ Programmet ska, förutom att presentera beloppet kunden får
 tillbaka avrundat till närmsta 50-öring, även bestämma vilka, och antalet, sedlar och mynt. Kunden
 ska få så få sedlar och mynt som möjligt tillbaka. Programmet ska kunna ge växel tillbaka med
 sedlar av valörerna 1000, 500, 100, 50 och 20 samt mynten 10, 5, 1 och 50-öring. Du kan anta att
-det alltid finns tillräckligt antal av de sedlar och mynt som krävs. */
+det alltid finns tillräckligt antal av de sedlar och mynt som krävs. 
 
 void oneThreeFive() {
     int number;
 }
+
+*/
+
 
 
 
@@ -131,4 +134,4 @@ int main(void) { // Körning av funktioner för delkapitel 1.2
     return 0;
 }
 
-// gcc -Wall -Wextra -std=c11
+// gcc -Wall -Wextra -std=c11 oneThree.c -o oneThree
