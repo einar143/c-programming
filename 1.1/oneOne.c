@@ -72,7 +72,7 @@ e) printf(/* Skriv ut... */"");
 
 int main(void) { // Körning av funktioner för delkapitel 1.1 :)
     oneOneOne();
-    oneOneTwoD();
+    // oneOneTwoD();
     return 0;
 }
 
