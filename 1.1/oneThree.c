@@ -118,19 +118,45 @@ tillbaka avrundat till närmsta 50-öring, även bestämma vilka, och antalet, s
 ska få så få sedlar och mynt som möjligt tillbaka. Programmet ska kunna ge växel tillbaka med
 sedlar av valörerna 1000, 500, 100, 50 och 20 samt mynten 10, 5, 1 och 50-öring. Du kan anta att
 det alltid finns tillräckligt antal av de sedlar och mynt som krävs. 
-
-void oneThreeFive() {
-    int number;
-}
-
 */
 
 
+void oneThreeSeven() {
+    int spelare;
+    int dator;
+
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+
+    printf("1 = sten, 2 = sax, 3 = påse\n");
+    scanf("%d", &spelare);
+
+    dator = rand() % 3 + 1;
+    if (dator == 1)
+        printf("Datorn valde sten\n");
+    if (dator == 2)
+        printf("Datorn valde sax\n");
+    if (dator == 3)
+        printf("Datorn valde påse\n");
+
+    if (spelare == dator)
+        printf("Oavgjort\n");
+    else if (spelare == 1 && dator == 2) //spelare sten dator påse
+        printf("Du vann\n");
+    else if (spelare == 2 && dator == 3) //spelare sax dator påse
+        printf("Du vann\n");
+    else if (spelare == 3 && dator == 1) //spelare påse dator sten
+        printf("Du vann\n");
+    else
+        printf("Datorn vann\n");
+
+}
 
 
 int main(void) { // Körning av funktioner för delkapitel 1.2
-    oneThreeFour();
+    // oneThreeFour();
     // oneThreeFive();
+    oneThreeSeven();
     return 0;
 }
 

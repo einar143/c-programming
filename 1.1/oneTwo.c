@@ -8,16 +8,19 @@
 resultatet har. Om användaren matar in felaktig data (dvs, inte ett heltal) skall programmet skriva ut
 ett meddelande och avslutas. Tips: använd funktionen scanf */
 
-void oneOneTwo() {
-    int number;
+void oneTwoOne() {
+    double number; // tidigare  <int number;>
+
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
+
     printf("Mata in ett heltal: ");
-    if (scanf("%d", &number) != 1) {
+
+    if (scanf("%lf", &number) != 1 || number != (int)number) { // tidigare var inte andra conditioner med
         printf("Felaktig inmatning. Programmet avslutas.\n");
         return;
     }
-    int result = number * 2;
+    int result = number * 2; 
     int digitCount = 0;
     int temp = result;
     if (temp == 0) {
@@ -28,8 +31,9 @@ void oneOneTwo() {
             digitCount++;
         }
     }
-    printf("Resultatet av %d * 2 är %d och det har %d siffror.\n", number, result, digitCount);
-}
+    printf("Resultatet av %d * 2 är %d och det har %d siffror.\n",
+       (int)number, result, digitCount);
+    }
 
 // 1.2.2 --------------------------------------------------------------
 /*
@@ -42,9 +46,27 @@ att producera följande utskrifter från programmet:
 • Talet Q med nollpadding till totalt 9 siffror (ex: 747 skrivs 000000747) 
 */
 
+void oneTwoTwo() {
+    int P;
+    int Q;
+
+    printf("Mata in P: ");
+    scanf("%d", &P);
+
+    printf("Mata in Q: ");
+    scanf("%d", &Q);
+
+    printf("P i hexadecimal form: %x\n", P);
+    printf("P/Q med 3 decimaler: %.3f\n", (double)P / Q);
+    printf("P %% Q: %d\n", P % Q);
+    printf("Q * P i tiopotensform: %e\n", (double)Q * P);
+    printf("Q med nollpadding: %09d\n", Q);
+}
+
 
 int main(void) { // Körning av funktioner för delkapitel 1.2
-    oneOneTwo();
+    // oneTwoOne();
+    oneTwoTwo();
     return 0;
 }
 

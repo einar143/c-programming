@@ -9,8 +9,10 @@ void oneOneOne() {
     int number1 = 5;
     int number2 = 10;
     int result = number1*number2;
+
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
+
     printf("Låt oss göra lite matte\n");
     printf("%d * %d = %d \n", number1, number2, result);
 }
@@ -48,6 +50,7 @@ OBS: tomrummet mellan ”har” och ”tabb” är ett tabulatortecken.
 void oneOneTwoD() {
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
+
     printf("I C kan vi göra en massa saker med escape-sekvenser:\n");
     printf("vi har tabb\teller vi kan aktivera ett larm\n");
     printf("\a"); // Aktiverar ljud vid körning?
@@ -70,9 +73,9 @@ e) printf(/* Skriv ut... */"");
 // e) Kommer skriva ut ingenting eftersom det är en korrekt printf-sats men med en tom sträng.
 
 
-int main(void) { // Körning av funktioner för delkapitel 1.1 :)
-    oneOneOne();
-    // oneOneTwoD();
+int main(void) { 
+    // oneOneOne();
+    oneOneTwoD();
     return 0;
 }
 
