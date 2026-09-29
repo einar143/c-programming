@@ -19,15 +19,49 @@ void oneFiveOne() {
 }
 
 // 1.5.11 --------------------------------------------------------------
+char *SafeCopyString(char *dest, const char *origin, size_t count)
+{
+    size_t length = 0;
+    size_t copied;
+    size_t i;
+    int backwards = 0;
+    int truncated;
 
-void oneFiveEleven() {
-    // TODO
-    
-}
+    if (dest == NULL || origin == NULL || count == 0) {
+        errno = EINVAL;
+        return NULL;
+    }
 
-int main(void) { 
-    oneFiveOne();
-    return 0;
+    /* Sök efter nolltecknet inom läsgränsen. */
+    while (length < count && origin[length] != '\0') {
+        ++length;
+    }
+
+    truncated = (length == count);
+    copied = truncated ? count - 1 : length;
+
+    /* Kontrollera om överlapp kräver kopiering baklänges. */
+    for (i = 1; i < copied; ++i) {
+        if (dest == origin + i) {
+            backwards = 1;
+            break;
+        }
+    }
+
+    if (backwards) {
+        for (i = copied; i > 0; --i) {
+            dest[i - 1] = origin[i - 1];
+        }
+    } else {
+        for (i = 0; i < copied; ++i) {
+            dest[i] = origin[i];
+        }
+    }
+
+    dest[copied] = '\0';
+    errno = truncated ? ERANGE : 0;
+
+    return dest;
 }
 
 #if 0
