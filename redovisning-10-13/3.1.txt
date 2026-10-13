@@ -1,0 +1,53 @@
+3.1.1 Statisk länkning - teori
+==============================
+
+Statisk länkning betyder att länkaren kopierar in koden från biblioteken
+direkt i den körbara filen när programmet byggs. Vid dynamisk länkning ligger
+bibliotekskoden kvar i en egen fil (.dll i Windows, .so i Linux) och laddas
+först när programmet startar.
+
+
+Filstorlek
+----------
+Den körbara filen blir större, eftersom bibliotekskoden som programmet
+använder ligger inuti filen. Länkaren tar bara med de objektfiler ur
+biblioteket som faktiskt används, så hela biblioteket följer inte med.
+
+Om flera program använder samma bibliotek får varje program sin egen kopia.
+Det tar mer plats på disken totalt, och även mer RAM när programmen körs
+samtidigt, eftersom en .dll kan delas mellan program men inte statisk kod.
+
+Jämförelse från uppgift 3.2.1: där ligger koden för skrivEtt och skrivTva i
+ett.dll och tva.dll, inte i main.exe. Hade jag länkat ett.c och tva.c statiskt
+(gcc main.c ett.c tva.c) hade koden hamnat i main.exe istället, och main.exe
+hade gått att köra utan .dll-filerna.
+
+
+Prestanda
+---------
+Uppstarten går lite snabbare. Alla adresser till funktionerna bestäms redan
+vid länkningen, så operativsystemet behöver inte leta upp och ladda några
+bibliotek när programmet startar.
+
+Funktionsanropen blir också lite snabbare. Ett statiskt länkat anrop går
+direkt till funktionens adress, medan ett anrop till en .dll går via en
+tabell med adresser (ett extra hopp). Skillnaden är oftast väldigt liten.
+
+Nackdelen är minnet: om många program kör samtidigt med samma statiska
+bibliotek finns koden i RAM en gång per program.
+
+
+Kompatibilitet/Portabilitet
+---------------------------
+Fördel: programmet är en enda fil som innehåller allt det behöver. Det går
+att kopiera till en annan dator utan att rätt .dll-filer måste finnas där,
+och det kan inte sluta fungera för att någon har en annan version av
+biblioteket installerad.
+
+Nackdel: om biblioteket uppdateras, till exempel för att rätta en bugg eller
+ett säkerhetshål, måste programmet länkas om för att få med ändringen. Med
+dynamisk länkning räcker det att byta ut .dll-filen.
+
+Programmet är fortfarande bara portabelt till samma operativsystem och samma
+processortyp. En statiskt länkad .exe för Windows går inte att köra i Linux,
+då måste källkoden kompileras om där.
