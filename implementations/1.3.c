@@ -34,13 +34,14 @@ void oneThreeFive(void) {
         printf("Priset är för högt, maxbelopp är 10000 kr.\n");
         return; }
 //    } else {            // Behövs detta vid %lf och scanf? 
+       
 //        printf("Felaktig inmatning.\n");
 //        return;
 //    }
 
     // Konvertera belopp till ören för att undvika flyttalsproblem
-    int prisOre = (int)round(pris * 100);
-    int betaltOre = (int)round(betalt * 100);
+    int prisOre     = (int)round(pris * 100);
+    int betaltOre   = (int)round(betalt * 100);
 
     // Beräkna växel
     int vaxel = betaltOre - prisOre;

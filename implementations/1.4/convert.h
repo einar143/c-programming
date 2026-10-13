@@ -1,3 +1,4 @@
+#include <stdio.h>
 #ifndef CONVERT_H
 #define CONVERT_H
 
