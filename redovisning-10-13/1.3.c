@@ -53,6 +53,7 @@ d) a ^ b & c
 e) a & b ^ ~c
    a & b        = 0000 0001 & 0000 0010 = 0000 0000
    ... ^ ~c     = 0000 0000 ^ 1111 1100 = 1111 1100
+
    Svar: -4 (tvåkomplement, 252 om talet är teckenlöst)
 
 f) a | b & c

@@ -146,6 +146,25 @@ void oneFiveThree(void) {
 // Pekararitmetik: intFalt + 1 flyttar ett helt element framåt, alltså
 // sizeof(elementet) byte, inte en byte. Därför blir skillnaden 1 i antal element.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 1.5.4 --------------------------------------------------------------
 /*
 a) double dblField [100];
@@ -169,6 +188,38 @@ b) double dblField [100], *pDblField;
    - pDblField[0] är nu dblField[10], så pDblField har bara 90 element kvar.
      pDblField[95] kompilerar men pekar utanför fältet.
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 1.5.10 --------------------------------------------------------------
 /* Skriv ett valfritt program som använder sig av ett fält av pekare till funktioner som

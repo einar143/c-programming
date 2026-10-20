@@ -14,7 +14,7 @@ void dubblera(int x) {
     x = 2 * x;
 }
 
-// b) Förslag: returnera det dubblerade talet istället
+// b)
 int dubbleraRetur(int x) {
     return 2 * x;
 }
@@ -41,11 +41,48 @@ void oneFourTwo(void) {
 // man skriver number = dubbleraRetur(number), eller så tar funktionen emot
 // en pekare, void dubblera(int *x), och ändrar värdet på adressen (se 1.5.1 c).
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 1.4.4 --------------------------------------------------------------
 /* Skriv ett program med en funktion som skifta (eller flytta) ett teckenlöst heltal (unsigned int) ett
 antal steg åt vänster. Båda ges som indata. Givet två tal, x och y, så skall bitarna i x flyttas y platser
 åt vänster, och bitarna som förloras till vänster hamna till höger.
 */
+
+
+
+
+
 
 unsigned int roteraVanster(unsigned int x, unsigned int y) {
     unsigned int antalBitar = sizeof(unsigned int) * CHAR_BIT;
