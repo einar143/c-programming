@@ -122,7 +122,6 @@ int main(void) {
     return 0;
 }
 
-
 #if 0
 gcc -Wall -Wextra -std=c11 1.6.2.c -o oneSixTwo
 #endif

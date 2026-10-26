@@ -27,7 +27,7 @@ struct node {
 };
 
 // a) Allokerar en ny nod med malloc. Noden har inga grannar från början.
-//
+
 // malloc(sizeof(struct node)) ber om precis så många byte som en nod behöver
 struct node *skapaNod(double data) {
     struct node *nyNod = malloc(sizeof(struct node));
@@ -51,7 +51,7 @@ struct node *skapaNod(double data) {
 // b) Lägger till en ny nod sist i kedjan och returnerar början av kedjan.
 //
 // Funktionen returnerar forsta eftersom forsta kan ändras: om kedjan var tom
-// blir den nya noden den första. (Samma idé som dubbleraRetur i 1.4.2,
+// blir den nya noden den första.
 // vi returnerar det nya värdet istället för att ändra via en pekare.)
 struct node *laggTillSist(struct node *forsta, double data) {
     struct node *nyNod = skapaNod(data);
@@ -108,9 +108,13 @@ struct node *taBortNod(struct node *forsta, int plats) {
     //
     //   före:   [A] <-> [aktuell] <-> [B]
     //   efter:  [A] <-> [B]
-    //
+
     // A:s next ska peka på B. Finns det ingen A tar vi bort den första noden,
     // och då blir B den nya första.
+    
+    // aktuell->previous->next  =  aktuell->next;
+    //└──────┬─────────┘└─┬─┘    └──────┬─────┘
+    //   noden A       A:s next      noden B
     if (aktuell->previous != NULL) {
         aktuell->previous->next = aktuell->next;
     } else {
