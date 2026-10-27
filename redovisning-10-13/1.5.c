@@ -167,8 +167,11 @@ void oneFiveThree(void) {
 
 // 1.5.4 --------------------------------------------------------------
 /*
+
+ett fält är en fast plats i minnet, en pekare är en variabel som innehåller en adress.
+
 a) double dblField [100];
-   . . .
+   
    dblField = dblField + 10;
 
    Går inte att kompilera. dblField är namnet på ett fält och fungerar som en
@@ -176,17 +179,11 @@ a) double dblField [100];
    nytt värde, fältet ligger där det ligger i minnet.
 
 b) double dblField [100], *pDblField;
-   . . .
+   
    pDblField = dblField + 10;
 
    Kompilerar. pDblField är en vanlig pekarvariabel och får adressen till
    element nummer 10, alltså samma sak som &dblField[10].
-
-   Det som kan bli fel mot vad man tänkt sig:
-   - Det adderar inte 10 till värdena i fältet, det är adressen som ändras.
-   - Adressen flyttas inte 10 byte utan 10 * sizeof(double) = 80 byte.
-   - pDblField[0] är nu dblField[10], så pDblField har bara 90 element kvar.
-     pDblField[95] kompilerar men pekar utanför fältet.
 */
 
 

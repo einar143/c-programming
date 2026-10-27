@@ -3,12 +3,6 @@
 #include <limits.h>
 
 // 1.4.2 --------------------------------------------------------------
-/* Skriv ett program med en funktion dubblera, som dubblerar ett tal.
-Gör en main-funktion som 1) initierar ett heltal till något värde, 2) skriver ut det, 3) använder
-funktionen dubblera på det och 4) skriver ut talet igen.
-a) Vad ger ditt program för svar, och varför?
-b) Ge ett förslag på hur man kan göra en dubblera-funktion istället.
-*/
 
 void dubblera(int x) {
     x = 2 * x;

@@ -51,3 +51,6 @@ dynamisk länkning räcker det att byta ut .dll-filen.
 Programmet är fortfarande bara portabelt till samma operativsystem och samma
 processortyp. En statiskt länkad .exe för Windows går inte att köra i Linux,
 då måste källkoden kompileras om där.
+
+#Creating dynamic libraries?
+#
